@@ -1,0 +1,172 @@
+<!-- BREADCRUMB AREA START -->
+<div class="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image" data-bg="assets/front-office/img/bg/9.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
+          <div class="section-title-area ltn__section-title-2">
+            <h6 class="section-subtitle ltn__secondary-color">//  Welcome to our company</h6>
+            <h1 class="section-title white-color">Account</h1>
+          </div>
+          <div class="ltn__breadcrumb-list">
+            <ul>
+              <li><a href="../../../../index.html">Home</a></li>
+              <li>Register</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BREADCRUMB AREA END -->
+
+<!-- LOGIN AREA START (Register) -->
+<div class="ltn__login-area pb-110">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title-area text-center">
+          <h1 class="section-title">Register <br>Your Account</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+            Sit aliquid,  Non distinctio vel iste.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="account-login-inner">
+          <form #registerForm="ngForm" class="ltn__form-box contact-form-box">
+            <input type="text" required minlength="3" #firstName="ngModel" [(ngModel)]="client.firstName" name="firstName" placeholder="First Name">
+            <div class="mt--30 mb-25" *ngIf="firstName.invalid">
+              <div *ngIf="firstName.errors && firstName.errors['required']">
+                Your first name is Required.
+              </div>
+              <div *ngIf="firstName.errors && firstName.errors['minlength']">
+                Your first name must be at least 3 characters.
+              </div>
+            </div>
+            <input type="text" required minlength="3" #lastName="ngModel" [(ngModel)]="client.lastName" name="lastName" placeholder="Last Name">
+            <div class="mt--30 mb-25" *ngIf="lastName.invalid">
+              <div *ngIf="lastName.errors && lastName.errors['required']">
+                Your last name is Required.
+              </div>
+              <div *ngIf="lastName.errors && lastName.errors['minlength']">
+                Your last name must be at least 3 characters.
+              </div>
+            </div>
+            <input type="text" required pattern="[0-9]{8}" #phoneNumber="ngModel" [(ngModel)]="client.phoneNumber" name="phoneNumber" placeholder="Phone Number">
+            <div class="mt--30 mb-25" *ngIf="phoneNumber.invalid">
+              <div *ngIf="phoneNumber.errors && phoneNumber.errors['required']">
+                Your phone number is Required.
+              </div>
+              <div *ngIf="phoneNumber.errors && phoneNumber.errors['pattern']">
+                Your phone number must be 8 numbers.
+              </div>
+            </div>
+            <input type="text" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" #username="ngModel" [(ngModel)]="client.username" name="username" placeholder="Email*">
+            <div class="mt--30 mb-25" *ngIf="username.invalid">
+              <div *ngIf="username.errors && username.errors['required']">
+                Your email is Required.
+              </div>
+              <div *ngIf="username.errors && username.errors['pattern']">
+                Your email is not valid.
+              </div>
+            </div>
+            <input type="password" required minlength="3" #password="ngModel" [(ngModel)]="client.password" name="password" placeholder="Password*">
+            <div class="mt--30 mb-25" *ngIf="password.invalid">
+              <div *ngIf="password.errors && password.errors['required']">
+                Your password is Required.
+              </div>
+              <div *ngIf="password.errors && password.errors['minlength']">
+                Your password must be at least 3 characters.
+              </div>
+            </div>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">
+              I consent to Herboil processing my personal data in order to send personalized marketing material in accordance with the consent form and the privacy policy.
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">
+              By clicking "create account", I consent to the privacy policy.
+            </label>
+            <div class="btn-wrapper">
+              <button class="theme-btn-1 btn reverse-color btn-block" (click)="register()" [disabled]="registerForm.invalid" type="submit">CREATE ACCOUNT</button>
+            </div>
+          </form>
+          <div class="by-agree text-center">
+            <p>By creating an account, you agree to our:</p>
+            <p><a href="#">TERMS OF CONDITIONS  &nbsp; &nbsp; | &nbsp; &nbsp;  PRIVACY POLICY</a></p>
+            <div class="go-to-btn mt-50">
+              <a href="login.html">ALREADY HAVE AN ACCOUNT ?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- LOGIN AREA END -->
+
+<!-- FEATURE AREA START ( Feature - 3) -->
+<div class="ltn__feature-area before-bg-bottom-2 mb--30--- plr--5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ltn__feature-item-box-wrap ltn__border-between-column white-bg">
+          <div class="row">
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="ltn__feature-item ltn__feature-item-8">
+                <div class="ltn__feature-icon">
+                  <img src="../../../../assets/front-office/img/icons/icon-img/11.png" alt="#">
+                </div>
+                <div class="ltn__feature-info">
+                  <h4>Curated Products</h4>
+                  <p>Provide Curated Products for
+                    all product over $100</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="ltn__feature-item ltn__feature-item-8">
+                <div class="ltn__feature-icon">
+                  <img src="../../../../assets/front-office/img/icons/icon-img/12.png" alt="#">
+                </div>
+                <div class="ltn__feature-info">
+                  <h4>Handmade</h4>
+                  <p>We ensure the product quality
+                    that is our main goal</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="ltn__feature-item ltn__feature-item-8">
+                <div class="ltn__feature-icon">
+                  <img src="../../../../assets/front-office/img/icons/icon-img/13.png" alt="#">
+                </div>
+                <div class="ltn__feature-info">
+                  <h4>Natural Food</h4>
+                  <p>Return product within 3 days
+                    for any product you buy</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="ltn__feature-item ltn__feature-item-8">
+                <div class="ltn__feature-icon">
+                  <img src="../../../../assets/front-office/img/icons/icon-img/14.png" alt="#">
+                </div>
+                <div class="ltn__feature-info">
+                  <h4>Free home delivery</h4>
+                  <p>We ensure the product quality
+                    that you can trust easily</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FEATURE AREA END -->
